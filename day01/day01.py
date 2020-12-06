@@ -1,8 +1,4 @@
-def get_data(filename) -> list:
-    try:
-        return open(filename, 'r').read().split()
-    except FileNotFoundError:
-        print("Fail not found")
+from data import get_data_from_fail
 
 
 def find_two_parts_of_given_number(nums, number):
@@ -20,6 +16,6 @@ def find_three_parts_of_given_number(nums, number):
 
 
 if __name__ == '__main__':
-    data = get_data('data.txt')
+    data = get_data_from_fail('data.txt', "\n")
     print(find_two_parts_of_given_number(data, 2020))  # 1014171
     print(find_three_parts_of_given_number(data, 2020))  # 46584630
