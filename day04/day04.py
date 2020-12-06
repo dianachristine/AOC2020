@@ -38,7 +38,7 @@ def is_correct_pid(pid):
     return pid.isdigit()
 
 
-def are_required_field_present(passport):
+def are_required_fields_present(passport):
     return 'byr' in passport and 'iyr' in passport and \
            'eyr' in passport and 'hgt' in passport and \
            'hcl' in passport and 'ecl' in passport and \
@@ -46,7 +46,7 @@ def are_required_field_present(passport):
 
 
 def is_passport_valid(passport: str):
-    if are_required_field_present(passport):
+    if are_required_fields_present(passport):
         if is_correct_byr(passport[passport.index('byr') + 4: passport.index('byr') + 8]) and \
                 is_correct_iyr(passport[passport.index('iyr') + 4: passport.index('iyr') + 8]) and \
                 is_correct_eyr(passport[passport.index('eyr') + 4: passport.index('eyr') + 8]) and \
