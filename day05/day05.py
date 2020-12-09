@@ -1,4 +1,4 @@
-from data import get_data_from_fail
+from dto import Dto
 
 
 def decode_seat_code(seat_code: str, rows: int, columns: int) -> int:
@@ -34,7 +34,7 @@ def find_the_missing_seat_ids(seat_ids, rows, columns) -> list:
 
 
 if __name__ == '__main__':
-    data = get_data_from_fail("data.txt", "\n")
+    data = Dto("data.txt", "\n").get_data()
 
     ids = find_all_seat_ids(data, 128, 8)
     print(find_highest_seat_id(ids))  # 919

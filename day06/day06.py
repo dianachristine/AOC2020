@@ -1,4 +1,4 @@
-from data import get_data_from_fail
+from dto import Dto
 
 
 def get_yes_count_of_one_group(group_answers: str) -> int:
@@ -34,7 +34,7 @@ def get_yes_count_of_all_groups(groups_answers: list, all_yes: bool) -> int:
 
 
 if __name__ == '__main__':
-    data = get_data_from_fail("data.txt", "\n\n")
+    data = Dto("data.txt", "\n\n").get_data()
 
     print(get_yes_count_of_all_groups(data, False))  # 6885
     print(get_yes_count_of_all_groups(data, True))  # 3550

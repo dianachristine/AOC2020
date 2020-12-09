@@ -1,4 +1,4 @@
-from data import get_data_from_fail
+from dto import Dto
 
 
 def is_correct_byr(byr):
@@ -73,7 +73,7 @@ def get_num_of_valid_passports(passports: list):
 
 
 if __name__ == '__main__':
-    data = get_data_from_fail("data.txt", "\n\n")
+    data = Dto("data.txt", "\n\n").get_data()
 
     print(get_num_of_valid_passports(data))
 # 140 is correct answer

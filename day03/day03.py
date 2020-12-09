@@ -1,5 +1,5 @@
 import math
-from data import get_data_from_fail
+from dto import Dto
 
 
 def get_bigger_map(treemap, n: int):
@@ -21,7 +21,7 @@ def find_num_of_encountered_trees(treemap, r_step, d_step) -> int:
 
 
 if __name__ == '__main__':
-    data = get_data_from_fail("data.txt", "\n")
+    data = Dto("data.txt", "\n").get_data()
 
     right_step = 3
     down_step = 1

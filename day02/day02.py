@@ -1,4 +1,4 @@
-from data import get_data_from_fail
+from dto import Dto
 
 
 def is_given_pw_valid_by_old_rules(policy, password):
@@ -28,7 +28,7 @@ def get_num_of_valid_passwords(passwords: list, new_rules: bool) -> int:
 
 
 if __name__ == '__main__':
-    data = get_data_from_fail("data.txt", "\n")
+    data = Dto("data.txt", "\n").get_data()
 
     print(get_num_of_valid_passwords(data, False))  # 378
     print(get_num_of_valid_passwords(data, True))  # 280
